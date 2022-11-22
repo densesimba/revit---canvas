@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Econfaire.Monada.UI;
+using System;
 using System.Windows.Forms;
 
-namespace revit_canvas
+namespace Econfaire.Monada
 {
     static class Program
     {
@@ -16,7 +14,7 @@ namespace revit_canvas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FormMain());
         }
     }
 }

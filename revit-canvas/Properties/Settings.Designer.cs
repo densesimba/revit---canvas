@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace revit_canvas.Properties {
+namespace Econfaire.Monada.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

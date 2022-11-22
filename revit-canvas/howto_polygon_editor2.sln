@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.33027.164
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "revit-canvas", "revit-canvas\revit-canvas.csproj", "{3991F549-B5F1-4602-8453-36330FBB970F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "howto_polygon_editor2", "howto_polygon_editor2.csproj", "{BEE890D3-2ACE-4A63-91E2-8B56DB1F3120}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3991F549-B5F1-4602-8453-36330FBB970F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3991F549-B5F1-4602-8453-36330FBB970F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3991F549-B5F1-4602-8453-36330FBB970F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3991F549-B5F1-4602-8453-36330FBB970F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEE890D3-2ACE-4A63-91E2-8B56DB1F3120}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEE890D3-2ACE-4A63-91E2-8B56DB1F3120}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEE890D3-2ACE-4A63-91E2-8B56DB1F3120}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEE890D3-2ACE-4A63-91E2-8B56DB1F3120}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {81A00C0B-E92F-4B6A-B68D-231779499A91}
+		SolutionGuid = {BE52DEC9-1194-487D-9F12-11092AF9AEC3}
 	EndGlobalSection
 EndGlobal
