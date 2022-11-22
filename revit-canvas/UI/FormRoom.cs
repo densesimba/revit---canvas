@@ -50,10 +50,19 @@ namespace Econfaire.Monada.UI
             FormMain.NewPolygon.Add(x4);
             newRoom.Polygon.Add(FormMain.NewPolygon);
 
+           newRoom.Label = new Label
+            {
+                Size = new Size(47, 13),
+                Visible = true,
+                Text = newRoom.Name,
+                Location = new Point(newRoom.LocationX + (newRoom.LengthX / 2) - Text.Length - 5, newRoom.LocationY + (newRoom.LengthY / 2))
+            };
+
+            frmMain.picCanvas.Controls.Add(newRoom.Label);
+
             FormMain.rooms.Add(newRoom.Index, newRoom);
 
             this.Dispose();
-            this.DialogResult = DialogResult.OK;
         }
 
         public bool IsNameValid(string input)

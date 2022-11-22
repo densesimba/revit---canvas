@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace Econfaire.Monada.Models
 {
@@ -11,7 +12,7 @@ namespace Econfaire.Monada.Models
         public int LengthX { get; set; }
         public int LengthY { get; set; }
         public string Name { get; set; }
-        public Point LabelLocation { get; set; } = new Point();
+        public Label Label { get; set; } = new Label();
         public List<List<Point>> Polygon { get; set; } = new List<List<Point>>();
     }
 }

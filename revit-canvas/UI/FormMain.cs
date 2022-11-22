@@ -178,6 +178,12 @@ namespace Econfaire.Monada.UI
                     MovingPolygon[i].Y + dy);
             }
 
+            var lastRoom = rooms
+                .Values
+                .Where(r => r.Polygon.Contains(MovingPolygon))
+                .LastOrDefault();
+            lastRoom.Label.Location = new Point(new_x1 + (lastRoom.LengthX / 2) - Text.Length - 5, new_y1 + (lastRoom.LengthY / 2));
+
             // Redraw.
             picCanvas.Invalidate();
         }
@@ -278,8 +284,8 @@ namespace Econfaire.Monada.UI
             }
         }
 
-            // See if the mouse is over a corner point.
-            private bool MouseIsOverCornerPoint(Point mouse_pt, out List<Point> hit_polygon, out int hit_pt)
+        // See if the mouse is over a corner point.
+        private bool MouseIsOverCornerPoint(Point mouse_pt, out List<Point> hit_polygon, out int hit_pt)
         {
             // See if we're over a corner point.
             foreach (List<Point> polygon in roomPolygons)
