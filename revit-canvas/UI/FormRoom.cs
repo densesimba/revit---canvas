@@ -16,6 +16,10 @@ namespace Econfaire.Monada.UI
             InitializeComponent();
         }
 
+        public FormRoom()
+        {
+        }
+
         private void btnCreateRoom_Click(object sender, EventArgs e)
         {
             Room newRoom = new Room
@@ -61,6 +65,12 @@ namespace Econfaire.Monada.UI
             frmMain.picCanvas.Controls.Add(newRoom.Label);
 
             FormMain.rooms.Add(newRoom.Index, newRoom);
+
+            if (FormMain.NewPolygon.Count > 2)
+            {
+                frmMain.roomPolygons.Add(FormMain.NewPolygon);
+            }
+            FormMain.NewPolygon = null;
 
             this.Dispose();
         }

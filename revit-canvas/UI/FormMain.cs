@@ -11,7 +11,7 @@ namespace Econfaire.Monada.UI
     public partial class FormMain : Form
     {
         public static Dictionary<int, Room> rooms = new Dictionary<int, Room>();
-        List<List<Point>> roomPolygons = new List<List<Point>>();
+       public List<List<Point>> roomPolygons = new List<List<Point>>();
         public static List<Point> NewPolygon;
 
         public FormMain()
@@ -60,6 +60,7 @@ namespace Econfaire.Monada.UI
 
             if (NewPolygon != null)
             {
+              
                 // We are already drawing a polygon.
                 // If it's the right mouse button, finish this polygon.
                 if (e.Button == MouseButtons.Right)
@@ -70,7 +71,7 @@ namespace Econfaire.Monada.UI
 
                     // We no longer are drawing.
                     picCanvas.MouseMove += picCanvas_MouseMove_NotDrawing;
-                    picCanvas.MouseMove -= picCanvas_MouseMove_Drawing;
+                    //picCanvas.MouseMove -= picCanvas_MouseMove_Drawing;
 
                 }
                 else
@@ -183,7 +184,7 @@ namespace Econfaire.Monada.UI
                 .Where(r => r.Polygon.Contains(MovingPolygon))
                 .LastOrDefault();
             lastRoom.Label.Location = new Point(new_x1 + (lastRoom.LengthX / 2) - Text.Length - 5, new_y1 + (lastRoom.LengthY / 2));
-
+           
             // Redraw.
             picCanvas.Invalidate();
         }
@@ -210,6 +211,7 @@ namespace Econfaire.Monada.UI
             if (MouseIsOverCornerPoint(mouse_pt, out hit_polygon, out hit_point))
             {
                 new_cursor = Cursors.Arrow;
+
             }
             else if (MouseIsOverEdge(mouse_pt, out hit_polygon,
                 out hit_point, out hit_point2, out closest_point))
@@ -219,6 +221,8 @@ namespace Econfaire.Monada.UI
             else if (MouseIsOverPolygon(mouse_pt, out hit_polygon))
             {
                 new_cursor = Cursors.Hand;
+               
+
             }
 
             // Set the new cursor.
@@ -384,7 +388,7 @@ namespace Econfaire.Monada.UI
             //roomPolygons = (List<List<Point>>)rooms.Values.SelectMany(r => r.Polygon);
             FormRoom frmCreateRoom = new FormRoom(this);
             frmCreateRoom.ShowDialog();
-
+              
             picCanvas.Invalidate();
         }
 
@@ -430,7 +434,7 @@ namespace Econfaire.Monada.UI
             // return Math.Sqrt(dx * dx + dy * dy);
             return dx * dx + dy * dy;
         }
-
+        
         #endregion DistanceFunctions
 
     }
